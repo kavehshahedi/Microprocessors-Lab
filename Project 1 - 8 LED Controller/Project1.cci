@@ -1,0 +1,6 @@
+VERSION:3 SOURCE_TIMESTAMP:518A80E6
+NODE:I LEVEL:0 LINE:15 "E:\Applications\CodeVisionAVR\inc\mega16.h"
+NODE:I LEVEL:0 LINE:16 "E:\Applications\CodeVisionAVR\inc\delay.h"
+NODE:V LEVEL:0 LINE:18 "counter -> R4,R5"
+NODE:V LEVEL:0 LINE:19 "started -> R6,R7"
+NODE:F LEVEL:0 LINE:21 "main(void)"
