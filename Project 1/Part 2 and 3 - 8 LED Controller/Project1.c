@@ -2,7 +2,7 @@
 Project : 8 LED Controller
 Version : 
 Date    : 2020-12-10
-Author  : Kaveh Shahedi - Roozbeh Aghili
+Author  : Kaveh Shahedi
 Company : Kharazmi University
 Comments: Controlls 8 LEDs connected to an ATMega16 chipset.
 
