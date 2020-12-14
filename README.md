@@ -1,5 +1,11 @@
 <h2>Project 1</h2>
 
+<b>Part 1 - Toggle Pin by Clock</b><br>
+<ul>
+  <li>Toggle PORTA.0 to 0 and 1 every 0.5 seconds</li>
+  <li>Using ATMega16 and clock frequency has been set to 12.000000Mhz</li>
+</ul>
+
 <b>Part 2 and 3 - 8 LED Controller using ATMega16</b><br>
 <ul>
   <li>Enables LED #1 to #8 respectively as the PINA.0 of ATMega16 changes to 1. This loop will continue as far as the PINA.0 stays 1</li>
