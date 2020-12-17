@@ -1,0 +1,10 @@
+*.txt
+*.prj
+*.fct
+*.cwp
+*.cproj
+*.cci
+*.c~
+*.atsln
+Debug/
+Release/
