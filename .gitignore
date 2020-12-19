@@ -6,5 +6,6 @@
 *.cci
 *.c~
 *.atsln
+*.pdsbak
 Debug/
 Release/
