@@ -5,46 +5,104 @@ Date    : 2020-12-19
 Author  : Kaveh Shahedi
 Company : Kharazmi University
 Comments: Display a counter on four 7 segment displays
-
-Chip type               : ATmega16
-Program type            : Application
-AVR Core Clock frequency: 8.000000 MHz
-Memory model            : Small
-External RAM size       : 0
-Data Stack size         : 256
 *******************************************************/
-
 #include <mega16.h>
 #include <delay.h>
 
-#define ZERO 0b01000000;
-#define ONE 0b01111001;
-#define TWO 0b00100100;
-#define THREE 0b00110000;
-#define FOUR 0b00011001;
-#define FIVE 0b00010010;
-#define SIX 0b00000010;
-#define SEVEN 0b01111000;
-#define EIGHT 0b00000000;
-#define NINE 0b00011000;
+#define ZERO 0b00111111;
+#define ONE 0b00000110;
+#define TWO 0b01011011;
+#define THREE 0b01001111;
+#define FOUR 0b01100110;
+#define FIVE 0b01101101;
+#define SIX 0b01111101;
+#define SEVEN 0b00000111;
+#define EIGHT 0b01111111;
+#define NINE 0b01101111;
 
 int getNumber(int number);
 
-int counter = 0;
+int counter[4] = {0,0,0,0};
+int lastSevenSegment = 3;
 
-void main(void){
-    DDRC = 0xFF;
-    DDRD = 0xFF;
+int xorOpt;
+
+interrupt [TIM0_OVF] void timer0_ovf_isr(void)
+{
+    xorOpt = PORTC ^ 0xFF;
+    PORTC= xorOpt ^ 0xFF;
     
-   
-	while(1){
-        PORTD = getNumber(counter);
-        delay_ms(100);
-        
-        counter++;
-        if(counter > 9)
-            counter = 0;
-	}
+    PORTD = getNumber(counter[lastSevenSegment]);
+    
+    lastSevenSegment--;
+    if(lastSevenSegment < 0){
+        lastSevenSegment = 3;
+    }
+    
+    xorOpt = xorOpt >> 1;
+    if(xorOpt ==0)
+        xorOpt = 8;
+    
+    xorOpt = xorOpt ^ 0xFF;
+    PORTC = xorOpt;
+    xorOpt = xorOpt ^ 0xFF;
+    
+    TCNT0 = 0x00;
+}
+
+int i =3;
+int timerOneOverflow =0;
+interrupt [TIM1_OVF] void timer1_ovf_isr(void)
+{
+
+    timerOneOverflow++;
+    if(timerOneOverflow == 163){
+        counter[3] += 1;
+
+        while (i >= 0) {
+            if(counter[i] == 10) {
+                counter[i-1] += 1;
+                counter[i] = 0;
+            }
+            
+            i--;
+        }
+
+        i = 3;
+        timerOneOverflow=0;
+    }
+    
+    TCNT1H = 0xFF;
+    TCNT1L = 0xF0;
+}
+
+void main(void)
+{
+    DDRD = 0xFF;
+    DDRC = 0xFF;
+
+    PORTD = 0x00;
+    PORTC = 0b11101111;
+
+    TIMSK = (0<<OCIE2) | (0<<TOIE2) | (0<<TICIE1) | (0<<OCIE1A) | (0<<OCIE1B) | (1<<TOIE1) | (0<<OCIE0) | (1<<TOIE0);
+
+    TCCR0 = (0<<WGM00) | (0<<COM01) | (0<<COM00) | (0<<WGM01) | (1<<CS02) | (0<<CS01) | (1<<CS00);
+    TCNT0 = 0x00;
+    OCR0 = 0x00;
+
+    TCCR1A = (0<<COM1A1) | (0<<COM1A0) | (0<<COM1B1) | (0<<COM1B0) | (0<<WGM11) | (0<<WGM10);
+    TCCR1B = (0<<ICNC1) | (0<<ICES1) | (0<<WGM13) | (0<<WGM12) | (1<<CS12) | (0<<CS11) | (1<<CS10);
+    TCNT1H = 0xFF;
+    TCNT1L = 0xF0;
+
+    MCUCR = (0<<ISC11) | (0<<ISC10) | (0<<ISC01) | (0<<ISC00);
+    MCUCSR = (0<<ISC2);
+
+    #asm("sei") 
+    
+    while (1)
+    {
+    }
 }
 
 int getNumber(int number){

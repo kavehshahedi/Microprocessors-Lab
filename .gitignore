@@ -1,5 +1,7 @@
 *.txt
 *.prj
+*.prj~
+*.cbi
 *.fct
 *.cwp
 *.cproj
@@ -7,5 +9,6 @@
 *.c~
 *.atsln
 *.pdsbak
+*.workspace
 Debug/
 Release/
