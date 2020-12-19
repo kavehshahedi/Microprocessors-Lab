@@ -29,4 +29,12 @@
 <b>Part 1 - Single 7 Segment Counter</b>
 <ul>
   <li>Count from 0 to 9 and display the number on a single 7 segment</li>
+  <li>Using delay.h library to have some delays between counting</li>
+</ul>
+
+<br><b>Part 2 - Multiple 7 Segment Counter</b>
+<ul>
+  <li>Count from 0 to 9999 using four 7 segments</li>
+  <li>Counting procedure is done using avr timer0 and timer1</li>
+  <li>P.S: To count like real clock, there should be some calculations to set the best amount for timer1 overflow</li>
 </ul>
