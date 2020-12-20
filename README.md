@@ -14,6 +14,8 @@
   <li>P.S: There is a delay (0.5 seconds) to be able to detect the procedure of the circuit</li>
 </ul>
 
+![alt text](https://i.postimg.cc/jdf9D1st/image.png)
+
 <br><b>Part 4 - AVR Micro-Controller Clock</b>
 <ul>
   <li>Information about AVR micro-controller’ clock details</li>
@@ -38,6 +40,10 @@
 <br><b>Part 2 - Multiple 7 Segment Counter</b>
 <ul>
   <li>Count from 0 to 9999 using four 7 segments</li>
+  <li>Using only 11 pins to control the 7 segments instead of 28 pins</li>
+  <li>Enables and disables the 7 segments respectively</li>
   <li>Counting procedure is done using avr timer0 and timer1</li>
   <li>P.S: To count like real clock, there should be some calculations to set the best amount for timer1 overflow</li>
 </ul>
+
+![alt text](https://i.postimg.cc/8PvRDBtF/image.png)
