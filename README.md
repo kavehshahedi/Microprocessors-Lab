@@ -26,6 +26,7 @@
 <br>
 
 <h2>Project 2</h2>
+
 <b>Part 1 - Single 7 Segment Counter</b>
 <ul>
   <li>Count from 0 to 9 and display the number on a single 7 segment</li>
