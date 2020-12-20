@@ -1,3 +1,5 @@
+<img src="https://img.shields.io/badge/version-1.0.0-success?style=flat" height=25px href="#"/> <img src="https://img.shields.io/badge/language-C-blue?style=flat" height=25px href="#"/> <img src="https://img.shields.io/badge/chip-ATMega16-orange?style=flat" height=25px href="#"/>
+
 <h2>Project 1</h2>
 
 <b>Part 1 - Toggle Pin by Clock</b>
