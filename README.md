@@ -47,3 +47,13 @@
 </ul>
 
 ![alt text](https://i.postimg.cc/8PvRDBtF/image.png)
+<br>
+
+<h2>Project 3</h2>
+<b>Part 1 - Hello World on a LCD</b>
+<ul>
+  <li>Shows "Hello World" on an alphanumeric LCD</li>
+</ul>
+
+![alt text](https://i.postimg.cc/Y0PTxmF4/image.png)
+<br>
