@@ -1,6 +1,6 @@
 <img src="https://img.shields.io/badge/version-1.0.0-success?style=flat" height=25px href="#"/> <img src="https://img.shields.io/badge/language-C-blue?style=flat" height=25px href="#"/> <img src="https://img.shields.io/badge/chip-ATMega16-orange?style=flat" height=25px href="#"/>
 
-<h2>Project 1</h2>
+<h2>Project 1 - Timers and Clocks</h2>
 
 <b>Part 1 - Toggle Pin by Clock</b>
 <ul>
@@ -29,7 +29,7 @@
 </ul>
 <br>
 
-<h2>Project 2</h2>
+<h2>Project 2 - 7 Segments</h2>
 
 <b>Part 1 - Single 7 Segment Counter</b>
 <ul>
@@ -49,7 +49,7 @@
 ![alt text](https://i.postimg.cc/8PvRDBtF/image.png)
 <br>
 
-<h2>Project 3</h2>
+<h2>Project 3 - Alphanumeric LCD</h2>
 
 <b>Part 1 - Hello World on a LCD</b>
 <ul>
@@ -63,8 +63,17 @@
 <ul>
   <li>Show all English letters on an alphanumeric LCD</li>
   <li>Uses timer1 and its overflow to generate some delays</li>
-  <li>All letters will show in two lines</li>
+  <li>All letters will be shown in two lines</li>
 </ul>
 
 ![alt text](https://i.postimg.cc/y8vgWB3b/English-Letters.gif)
+<br>
+
+<b>Part 3 - Pulse Frequency Calculator</b>
+<ul>
+  <li>Calculates pulse frequency using input capture mode pin</li>
+  <li>Shows the frequency on the LCD</li>
+</ul>
+
+![alt text](https://i.postimg.cc/TPGvJqNj/image.png)
 <br>
