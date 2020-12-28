@@ -77,3 +77,10 @@
 
 ![alt text](https://i.postimg.cc/TPGvJqNj/image.png)
 <br>
+
+<h2>Project 4 - PCB</h2>
+
+<a> Generated a PCB model for <b>Project 2 - Part 2</b> task</a>
+
+![alt text](https://i.postimg.cc/pLXsYtGh/image.png)
+<br>
