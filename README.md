@@ -84,3 +84,19 @@
 
 ![alt text](https://i.postimg.cc/pLXsYtGh/image.png)
 <br>
+
+<h2>Project 5 - Stepper Motor</h2>
+
+
+![alt text](https://i.postimg.cc/3RgDJMGY/image.png)
+
+<b>Part 1 - Stepper Motor Basics</b>
+<ul>
+  <li>Runs stepper motor every 5ms</li>
+  <li>When stepper motor spun around completely, PORTA will be 0 for 5ms</li>
+  <li>Uses timer zero and its overflow to create the delay</li>
+</ul>
+
+<b>Part 2 - Stepper Motor Reverser</b>
+
+<a>Works exactly like previous part except that if PORTC.2 toggles, stepper motor' rotate direction will be reversed</a>
