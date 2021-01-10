@@ -100,3 +100,10 @@
 <b>Part 2 - Stepper Motor Reverser</b>
 
 <a>Works exactly like previous part except that if PORTC.2 toggles, stepper motor' rotate direction will be reversed</a>
+
+<b>Part 3 - Stepper Motor Various Speed</b>
+<ul>
+  <li>Runs stepper motor with the minimum speed (custom) and reaches its speed to the maximum speed</li>
+  <li>Reverse the direction of stepper motor as it finished one period of speed variation</li>
+  <li>Stays for a custom delay at its maximum speed</li>
+</ul>
