@@ -10,5 +10,10 @@
 *.atsln
 *.pdsbak
 *.workspace
+*.DO
+*.EDF
+*.log
+*.sts
+*.rte
 Debug/
 Release/
